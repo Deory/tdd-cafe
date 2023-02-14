@@ -12,4 +12,9 @@ public class Wallet {
         this.balance = balance;
     }
     
+    int pay(int price) {
+        balance -= price;
+        return price;
+    }
+    
 }
