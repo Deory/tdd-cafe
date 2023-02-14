@@ -16,6 +16,8 @@ public class Staff {
     }
     
     void getPay(Wallet wallet) {
-        wallet.pay(2500);
+        for (MENU menu : orderList) {
+            wallet.pay(menu.price);
+        }
     }
 }
