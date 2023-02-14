@@ -5,14 +5,17 @@ import java.util.List;
 
 public class Staff {
     
-    private final List<String> orderList = new ArrayList<>();
+    private final List<MENU> orderList = new ArrayList<>();
     
-    void putOrder(String menu) {
+    void putOrder(MENU menu) {
         orderList.add(menu);
     }
     
-    List<String> getOrderList() {
+    List<MENU> getOrderList() {
         return orderList;
     }
     
+    void getPay(Wallet wallet) {
+    
+    }
 }
