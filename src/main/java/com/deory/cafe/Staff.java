@@ -9,7 +9,7 @@ public class Staff {
     }
     
     List<String> getOrderList() {
-        return List.of();
+        return List.of("latte");
     }
     
 }
