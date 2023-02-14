@@ -1,15 +1,18 @@
 package com.deory.cafe;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Staff {
     
-    void putOrder(String menu) {
+    private final List<String> orderList = new ArrayList<>();
     
+    void putOrder(String menu) {
+        orderList.add(menu);
     }
     
     List<String> getOrderList() {
-        return List.of("latte");
+        return orderList;
     }
     
 }
