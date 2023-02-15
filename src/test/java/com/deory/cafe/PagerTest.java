@@ -9,9 +9,16 @@ class PagerTest {
     @Test
     public void testSetPagerRinging() {
         Pager pager = new Pager();
-        assertFalse(pager.ringing);
+        assertFalse(pager.isRinging());
         pager.setRinging();
-        assertTrue(pager.ringing);
+        assertTrue(pager.isRinging());
+    }
+    
+    @Test
+    public void testIsPagerRinging() {
+        Pager pager = new Pager();
+        pager.setRinging();
+        assertTrue(pager.isRinging());
     }
     
 }

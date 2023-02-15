@@ -2,12 +2,14 @@ package com.deory.cafe;
 
 public class Pager {
     
-    boolean ringing = false;
+    private boolean ringing = false;
     
     void setRinging() {
         ringing = true;
     }
     
-    
+    boolean isRinging() {
+        return ringing;
+    }
 
 }
