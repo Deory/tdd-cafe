@@ -12,10 +12,9 @@ public class Wallet {
         this.balance = balance;
     }
     
-    int pay(int price) {
+    void pay(int price) {
         if (price > balance) throw new IllegalArgumentException("balance is less then price");
         balance -= price;
-        return price;
     }
     
 }
