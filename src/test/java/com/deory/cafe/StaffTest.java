@@ -2,6 +2,7 @@ package com.deory.cafe;
 
 import org.junit.jupiter.api.Test;
 
+import java.time.Duration;
 import java.util.List;
 
 import static com.deory.cafe.MENU.*;
@@ -23,6 +24,15 @@ class StaffTest {
         Wallet wallet = new Wallet(10000);
         staff.getPay(wallet);
         assertEquals(wallet.getBalance(), 10000 - Latte.price);
+    }
+    
+    @Test
+    public void testGetPager() {
+        Staff staff = new Staff();
+        staff.putOrder(Latte);
+        Wallet wallet = new Wallet(3000);
+        Pager pager = staff.getPay(wallet);
+        assertNotNull(pager);
     }
     
 }

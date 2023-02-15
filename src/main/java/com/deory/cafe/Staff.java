@@ -15,9 +15,11 @@ public class Staff {
         return orderList;
     }
     
-    void getPay(Wallet wallet) {
+    Pager getPay(Wallet wallet) {
         for (MENU menu : orderList) {
             wallet.pay(menu.price);
         }
+        
+        return new Pager();
     }
 }
