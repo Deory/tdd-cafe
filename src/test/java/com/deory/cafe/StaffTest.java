@@ -38,6 +38,7 @@ class StaffTest {
     @Test
     public void testCallCustomer() {
         Staff staff = new Staff();
+        staff.putOrder(Latte);
         Wallet wallet = new Wallet(3000);
         Pager pager = staff.getPay(wallet);
         assertTrue(pager.isRinging());

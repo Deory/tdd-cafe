@@ -16,10 +16,18 @@ public class Staff {
     }
     
     Pager getPay(Wallet wallet) {
-        for (MENU menu : orderList) {
-            wallet.pay(menu.price);
-        }
+        Pager pager = new Pager();
         
-        return new Pager();
+        try {
+            for (MENU menu : orderList) {
+                wallet.pay(menu.price);
+            }
+            pager.setRinging();
+        }
+        catch (IllegalArgumentException e) {
+            System.err.println(e.getMessage());
+        }
+    
+        return pager;
     }
 }
