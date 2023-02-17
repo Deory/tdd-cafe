@@ -35,4 +35,12 @@ class StaffTest {
         assertNotNull(pager);
     }
     
+    @Test
+    public void testCallCustomer() {
+        Staff staff = new Staff();
+        Wallet wallet = new Wallet(3000);
+        Pager pager = staff.getPay(wallet);
+        assertTrue(pager.isRinging());
+    }
+    
 }
